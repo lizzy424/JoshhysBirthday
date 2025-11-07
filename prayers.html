@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prayers</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, pink, red);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Times New Roman', cursive;
+      color: black;
+      text-align: center;
+      margin: 0;
+    }
+
+    p {
+      font-size: 22px;
+      width: 80%;
+      max-width: 600px;
+      line-height: 1.5;
+      animation: fadeIn 2s ease;
+    }
+
+    button {
+      background-color: white;
+      color: red;
+      border: 2px solid red;
+      padding: 10px 25px;
+      border-radius: 20px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    button:hover {
+      background-color: red;
+      color: white;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    #musicButton {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="musicButton" onclick="playMusic()">🎵 Play Music</button>
+
+  <p>
+    Baby, 💕<br><br>
+    As you clock a new age, I pray that God grants you all that you look unto Him for<br>
+    I pray that all negatives that are not of God that you struggle with, God assists you in dealing with them.<br>
+    May God continually puts a smile on your face.<br>
+    May the Holy Spirit guide and protect you and strengthen you in all that you set your mind to do. 💖
+  </p>
+
+  <button onclick="goBack()">Back to Home</button>
+
+  <iframe id="music" width="0" height="0" 
+    src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&mute=1&loop=1&playlist=2Vv-BfVoq4g"
+    frameborder="0" allow="autoplay"></iframe>
+
+  <script>
+    function goBack() {
+      window.location.href = "birthday.html";
+    }
+    function playMusic() {
+      const iframe = document.getElementById("music");
+      iframe.src = "https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&mute=0&loop=1&playlist=2Vv-BfVoq4g";
+    }
+  </script>
+
+</body>
+</html>

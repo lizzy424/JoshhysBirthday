@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>18 Reasons I Love You</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, pink, red);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: 'Times New Roman', cursive;
+      color: black;
+      margin: 0;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 26px;
+      max-width: 700px;
+      animation: fadeIn 2s ease;
+    }
+
+    ol {
+      text-align: left;
+      max-width: 600px;
+      font-size: 20px;
+      margin-top: 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    li {
+      margin-bottom: 10px;
+      opacity: 0;
+      animation: fadeItem 1s forwards;
+    }
+
+    li:nth-child(n) { animation-delay: calc(0.2s * var(--i)); }
+
+    button {
+      background-color: white;
+      color: red;
+      border: 2px solid red;
+      padding: 10px 25px;
+      border-radius: 20px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 30px;
+      animation: fadeIn 2s ease;
+    }
+
+    button:hover {
+      background-color: red;
+      color: white;
+    }
+
+    #musicButton {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeItem {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <button id="musicButton" onclick="playMusic()">🎵 Play Music</button>
+
+  <h1>EIGHTEEN REASONS MY BOYFRIEND IS THE BEST IN THE WORLD💞</h1>
+
+  <ol id="reasonsList">
+    <li style="--i:1">You are the sweetest.</li>
+    <li style="--i:2">You always put a smile on my face even when I'm down.</li>
+    <li style="--i:3">You give the best hugs.</li>
+    <li style="--i:4">You make me the happiest girl ever.</li>
+    <li style="--i:5">You never stop making me feel loved.</li>
+    <li style="--i:6">You have an irresistably hot body of course.</li>
+    <li style="--i:7">You're a good person and you have a good heart.</li>
+    <li style="--i:8">You make every day feel a whole lot brighter.</li>
+    <li style="--i:9">You baby me and let me do whatever.</li>
+    <li style="--i:10">You never fail to make me feel special.</li>
+    <li style="--i:11">You also make the most basic moments feel special.</li>
+    <li style="--i:12">You are always there to listen to me rant and yap.</li>
+    <li style="--i:13">You're so respectful, patient, gentle, and so caring with me.</li>
+    <li style="--i:14">You compliment me every opportunity you get.</li>
+    <li style="--i:15">You love me when I look good and terrible.</li>
+    <li style="--i:16">You're my favourite snack.</li>
+    <li style="--i:17">You're not just my boyfriend — you're my best friend too.</li>
+    <li style="--i:18">You make me feel like the most precious thing ever 💖</li>
+  </ol>
+
+  <button onclick="goHome()">Back to Home</button>
+  <button onclick="goToPrayers()">Just one more click</button>
+
+
+  <iframe id="music" width="0" height="0" 
+    src="https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&mute=1&loop=1&playlist=2Vv-BfVoq4g"
+    frameborder="0" allow="autoplay"></iframe>
+
+  <script>
+    function goHome() {
+      window.location.href = "birthday.html";
+    }
+    function goToPrayers() {
+      window.location.href = "prayers.html";
+    }
+    function playMusic() {
+      const iframe = document.getElementById("music");
+      iframe.src = "https://www.youtube.com/embed/2Vv-BfVoq4g?autoplay=1&mute=0&loop=1&playlist=2Vv-BfVoq4g";
+    }
+    
+  </script>
+
+</body>
+</html>
